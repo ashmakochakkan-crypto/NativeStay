@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "637889612938",
+    "project_id": "nativestay-77105",
+    "storage_bucket": "nativestay-77105.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637889612938:android:a85ac3878f7f50ce5fb173",
+        "android_client_info": {
+          "package_name": "com.example.flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637889612938-nvn8mbhb0qovr7f3b1gkagq7mdfkue0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfiZbeFD-ZJfRRJYDbxJ7DhsuL7w8Dny4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637889612938-nvn8mbhb0qovr7f3b1gkagq7mdfkue0g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "637889612938-djk4ja0lmm4g4fn63qb6q8liot8jkkmf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
