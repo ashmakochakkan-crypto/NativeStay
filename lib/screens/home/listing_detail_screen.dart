@@ -4,13 +4,15 @@ import 'package:flutter/material.dart';
 import '../../models/booking.dart';
 import '../../models/home_listing.dart';
 import '../../models/review.dart';
-import '../../models/property_listing_data.dart'; // Added for AvailabilityPeriod
 import '../../services/booking_service.dart';
 import '../../services/review_service.dart';
 import '../../services/wishlist_service.dart';
 import '../../widgets/common_tiles.dart';
 import '../booking/booking_sheet.dart';
 import '../chat/contact_host_screen.dart';
+import 'cancellation_policy_screen.dart';       
+import 'house_rules_detail_screen.dart';        
+import 'safety_detail_screen.dart';            
 
 // ==========================================
 // LISTING DETAIL SCREEN
@@ -1138,8 +1140,15 @@ class _ListingDetailScreenState extends State<ListingDetailScreen> {
               if (l.doorLock == 'Yes') 'Door lock on private space',
               if (l.nearestHospital.isNotEmpty)
                 'Nearest hospital: ${l.nearestHospital}',
-              if (l.safetyInstructions.isNotEmpty) l.safetyInstructions,
             ],
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SafetyDetailScreen(listing: l),
+                ),
+              );
+            },
           ),
       ],
     );
@@ -1306,8 +1315,9 @@ class _ListingDetailScreenState extends State<ListingDetailScreen> {
               ],
             ),
           ),
-          const Icon(Icons.chevron_right_rounded,
-              color: Colors.black38, size: 20),
+          if (onTap != null)
+            const Icon(Icons.chevron_right_rounded,
+                color: Colors.black38, size: 20),
         ],
       ),
     );
