@@ -31,6 +31,28 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
         useMaterial3: true,
+        inputDecorationTheme: InputDecorationTheme(
+          hintStyle: const TextStyle(color: Colors.black38),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: const BorderSide(color: Colors.black12),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: const BorderSide(color: AppColors.primary, width: 2),
+          ),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColors.primary,
+            foregroundColor: Colors.black,
+            elevation: 0,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30)),
+          ),
+        ),
       ),
       home: const AppRoot(),
     );
@@ -103,7 +125,10 @@ class _AppRootState extends State<AppRoot> {
 
   Future<void> _loadUserData(String uid) async {
     try {
-      final doc = await FirebaseFirestore.instance.collection('users').doc(uid).get();
+      final doc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(uid)
+          .get();
       if (doc.exists && mounted) {
         final data = doc.data()!;
         setState(() {
@@ -121,7 +146,8 @@ class _AppRootState extends State<AppRoot> {
             'about': data['about'] ?? '',
           };
           _personalInfoData = {
-            'legalName': '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim(),
+            'legalName':
+                '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim(),
             'email': data['email'] ?? '',
             'phone': data['phone'] ?? '',
           };

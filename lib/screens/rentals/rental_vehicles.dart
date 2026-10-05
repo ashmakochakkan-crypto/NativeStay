@@ -10,6 +10,7 @@ import '../auth/login_modal_sheet.dart';
 import '../home/address_search_sheet.dart';
 import 'vehicle_dashboard_screen.dart';
 import 'vehicle_detail_screen.dart';
+import '../../models/indian_place.dart';
 
 // ==========================================
 // VEHICLE CONSTANTS

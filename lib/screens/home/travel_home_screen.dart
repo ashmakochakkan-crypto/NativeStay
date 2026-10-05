@@ -12,6 +12,7 @@ import '../notifications/notifications_screen.dart';
 import 'address_search_sheet.dart';
 import 'listing_detail_screen.dart';
 import '../host/host_dashboard_screen.dart';
+import '../../models/indian_place.dart';
 
 class TravelHomeScreen extends StatefulWidget {
   const TravelHomeScreen({super.key});

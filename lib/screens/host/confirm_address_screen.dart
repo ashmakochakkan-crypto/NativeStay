@@ -2,8 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../../models/property_listing_data.dart';
-import '../home/address_search_sheet.dart';
 import 'host_wizard_step1_screen.dart';
+import '../../models/indian_place.dart';
 
 class ConfirmAddressScreen extends StatefulWidget {
   final String userName;

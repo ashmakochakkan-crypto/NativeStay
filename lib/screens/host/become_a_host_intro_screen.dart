@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../home/address_search_sheet.dart';
 import 'confirm_address_screen.dart';
 import 'other_hosting_options_screen.dart';
+import '../../models/indian_place.dart';
 
 class BecomeAHostIntroScreen extends StatelessWidget {
   final String userName;

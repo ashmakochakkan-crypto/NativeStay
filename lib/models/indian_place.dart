@@ -20,7 +20,9 @@ class IndianPlace {
   });
 
   String get displayLabel {
-    final first = (locality != null && locality!.isNotEmpty) ? locality! : (subAdministrativeArea ?? '');
+    final first = (locality != null && locality!.isNotEmpty)
+        ? locality!
+        : (subAdministrativeArea ?? '');
     final state = administrativeArea ?? '';
     return [first, state].where((e) => e.isNotEmpty).join(', ');
   }

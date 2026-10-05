@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../../models/booking.dart';
 import '../../models/home_listing.dart';
+import '../../models/property_listing_data.dart';
 import '../../models/review.dart';
 import '../../services/booking_service.dart';
 import '../../services/review_service.dart';
@@ -10,9 +11,10 @@ import '../../services/wishlist_service.dart';
 import '../../widgets/common_tiles.dart';
 import '../booking/booking_sheet.dart';
 import '../chat/contact_host_screen.dart';
-import 'cancellation_policy_screen.dart';       
-import 'house_rules_detail_screen.dart';        
-import 'safety_detail_screen.dart';            
+import '../host/host_wizard_step7_screen.dart';   
+import 'cancellation_policy_screen.dart';
+import 'house_rules_detail_screen.dart';
+import 'safety_detail_screen.dart';      
 
 // ==========================================
 // LISTING DETAIL SCREEN
@@ -2060,54 +2062,3 @@ class _AvailabilityCalendarSheetState
   }
 }
 
-// ==========================================
-// CORRECTED PLACEHOLDERS AT BOTTOM
-// ==========================================
-
-class Amenity {
-  final String label;
-  final IconData icon;
-  const Amenity({required this.label, required this.icon});
-}
-
-const List<Amenity> kAllAmenities = [
-  Amenity(label: 'Wi-Fi', icon: Icons.wifi),
-  Amenity(label: 'Kitchen', icon: Icons.kitchen),
-  Amenity(label: 'Free Parking', icon: Icons.local_parking),
-  Amenity(label: 'Pool', icon: Icons.pool),
-  Amenity(label: 'AC', icon: Icons.ac_unit),
-  Amenity(label: 'TV', icon: Icons.tv),
-  Amenity(label: 'Washing Machine', icon: Icons.local_laundry_service),
-];
-
-class CancellationPolicyScreen extends StatelessWidget {
-  final HomeListing listing; // Added this
-  const CancellationPolicyScreen({super.key, required this.listing}); // Added required this.listing
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Cancellation Policy')),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Text('Cancellation policy for ${listing.stayName} goes here.'),
-      ),
-    );
-  }
-}
-
-class HouseRulesDetailScreen extends StatelessWidget {
-  final HomeListing listing; // Added this
-  const HouseRulesDetailScreen({super.key, required this.listing}); // Added required this.listing
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('House Rules')),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Text('House rules for ${listing.stayName} go here.'),
-      ),
-    );
-  }
-}

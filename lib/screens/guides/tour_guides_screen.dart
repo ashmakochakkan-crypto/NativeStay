@@ -11,6 +11,7 @@ import '../home/address_search_sheet.dart';
 import 'guide_dashboard_screen.dart';
 import 'guide_profile_screen.dart';
 import 'guide_wizard_step1_screen.dart';
+import '../../models/indian_place.dart';
 
 class TourGuidesScreen extends StatefulWidget {
   const TourGuidesScreen({super.key});

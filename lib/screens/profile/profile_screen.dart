@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../auth/login_screen.dart';
 import '../host/become_a_host_intro_screen.dart';
 import '../host/host_dashboard_screen.dart';
-import '../settings/account_settings_screen.dart';
+import 'account_settings_screen.dart';
 import '../settings/get_help_screen.dart';
 import '../settings/legal_screen.dart';
 import 'view_profile_screen.dart';
